@@ -17,7 +17,7 @@ app.use(express.json({ limit: "5mb" })); // req.body
  cors({
     origin: [
       "http://localhost:5173",
-      "https://connectly-frontend-r897.onrender.com"
+     https://connectly-front.onrender.com/
     ],
     credentials: true,
   })
