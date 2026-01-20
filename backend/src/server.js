@@ -14,7 +14,13 @@ const __dirname = path.resolve();
 const PORT = ENV.PORT || 3000;
 
 app.use(express.json({ limit: "5mb" })); // req.body
-app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));
+ cors({
+    origin: [
+      "http://localhost:5173",
+      "https://connectly-frontend-r897.onrender.com"
+    ],
+    credentials: true,
+  })
 app.use(cookieParser());
 
 
